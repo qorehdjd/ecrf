@@ -75,9 +75,7 @@ export default function Notices() {
         <MoreButton>더보기</MoreButton>
       </TitleContainer>
       <NoticeContentWrapper>
-        <NoticeLink href="#">
-          [cubeBUILDER, CDMS, IWRS, PRS] 시스템 업데이트 예정 안내
-        </NoticeLink>
+        <NoticeLink href="#">시스템 업데이트 예정</NoticeLink>
         <NoticeDate>2024-10-14 15:36:38</NoticeDate>
       </NoticeContentWrapper>
     </NoticeContainer>

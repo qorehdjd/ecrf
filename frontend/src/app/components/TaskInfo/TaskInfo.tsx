@@ -1,5 +1,13 @@
-// app/components/TaskInfoTable.tsx
+"use client";
 import styled from "styled-components";
+import { useEffect, useState } from "react";
+
+// TaskInfo 타입 정의
+interface Project {
+  name: string;
+  code: string;
+  description: string;
+}
 
 const TaskInfoContainer = styled.div`
   border-radius: 8px;
@@ -39,6 +47,15 @@ const Title = styled.div`
 `;
 
 export default function TaskInfoTable() {
+  const [project, setProject] = useState<Project | null>(null);
+
+  useEffect(() => {
+    const savedProject = localStorage.getItem("selectedProject");
+    if (savedProject) {
+      setProject(JSON.parse(savedProject) as Project);
+    }
+  }, []);
+
   return (
     <TaskInfoContainer>
       <Title>과제 정보</Title>
@@ -51,16 +68,15 @@ export default function TaskInfoTable() {
         </thead>
         <tbody>
           <TableRow>
-            <TableCell>무릎 관절 연구</TableCell>
-            <TableCell>LNC-MECA-004</TableCell>
+            <TableCell>{project?.name || "과제명을 선택하세요"}</TableCell>
+            <TableCell>{project?.code || "과제코드를 선택하세요"}</TableCell>
           </TableRow>
           <TableRow>
             <TableHeader colSpan={2}>과제 제목</TableHeader>
           </TableRow>
           <TableRow>
             <TableCell colSpan={2}>
-              무릎 관절 연구를 위한 MegaCarti® 사용 시 연골 재생의 효과성을
-              평가하기 위한 다기관, 독립적 평가 연구
+              {project?.description || "과제제목을 선택하세요"}
             </TableCell>
           </TableRow>
         </tbody>

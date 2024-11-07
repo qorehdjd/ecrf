@@ -18,7 +18,6 @@ export async function middleware(request: NextRequest) {
   // console.log("response", response);
   // console.log("supabase", supabase);
   // console.log("session", session);
-
   // /auth/login 경로 예외 처리
   if (request.nextUrl.pathname === "/auth/login") {
     return response;

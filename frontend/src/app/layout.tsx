@@ -19,7 +19,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body>
         <StyledComponentsRegistry>
           <GlobalStyles /> {/* GlobalStyles 추가 */}
-          {pathname === "/signup" || pathname === "/login" ? (
+          {pathname === "/signup" ||
+          pathname === "/login" ||
+          pathname === "/projects" ? (
             <div>{children}</div> // signup 및 login 페이지 레이아웃
           ) : (
             <div className="layout">

@@ -27,7 +27,10 @@ export async function POST(request: Request) {
 
   console.log("supabase8888888888888888", supabase);
 
-  return NextResponse.redirect(requestUrl.origin, {
+  // return NextResponse.redirect(requestUrl.origin, {
+  //   status: 301,
+  // });
+  return NextResponse.redirect(new URL("/projects", request.url), {
     status: 301,
   });
 }

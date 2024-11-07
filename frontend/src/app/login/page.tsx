@@ -100,7 +100,7 @@ export default function LoginPage() {
         body: new URLSearchParams({ email, password }),
       });
       if (response.ok) {
-        router.push("/"); // 로그인 성공 시 index로 이동
+        router.push("/projects"); // 로그인 성공 시 projects 이동
       } else {
         const data = await response.json(); // JSON 데이터 파싱
         setError(data.message); // 서버에서 보낸 에러 메시지 설정

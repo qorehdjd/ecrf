@@ -73,8 +73,8 @@ const GuidelineDate = styled.div`
 
 export default function Guidelines() {
   const guidelines = [
-    { name: "CRFs", link: "#", date: "2024-03-20 12:56:32" },
-    { name: "IRB 서류", link: "#", date: "2024-03-22 14:12:45" },
+    { name: "CRF", link: "#", date: "2024-03-20 12:56:32" },
+    { name: "IRB", link: "#", date: "2024-03-22 14:12:45" },
   ];
 
   return (

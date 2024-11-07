@@ -13,6 +13,7 @@ const HeaderContainer = styled.header`
   padding: 10px 20px;
   background-color: #f9f9f9;
   border-bottom: 1px solid #ddd;
+  width: 100%;
 `;
 
 const LogoContainer = styled.div`
@@ -69,8 +70,6 @@ export default function Header() {
 
     getUserInfo();
   }, []);
-
-  console.log("user", user);
 
   const handleLogout = async () => {
     const { error } = await supabase.auth.signOut();

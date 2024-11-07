@@ -24,10 +24,11 @@ export default function SurveyInfo() {
   return (
     <InfoBox>
       <Title>과제 정보</Title>
-      <Paragraph>과제명: LNC-MECA-004</Paragraph>
-      <Paragraph>과제코드: LNC-MECA-004</Paragraph>
+      <Paragraph>과제명: 유착방지연구</Paragraph>
+      <Paragraph>과제코드: W101-CT-001</Paragraph>
       <Paragraph>
-        과제목적: 무릎관절 연골손상 환자에서 MegaCarti® 사용 시...
+        과제목적: 연부조직 유착에 기인한 관절강직에 대한 콜라겐과 히알루로닉
+        치료에 대한 효과 연구
       </Paragraph>
     </InfoBox>
   );
