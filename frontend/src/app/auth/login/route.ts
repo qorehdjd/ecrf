@@ -3,8 +3,7 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-  console.log("123456");
-  const requestUrl = new URL(request.url);
+  // const requestUrl = new URL(request.url);
   const formData = await request.formData();
   const email = String(formData.get("email"));
   const password = String(formData.get("password"));
